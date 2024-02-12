@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Component } from "react";
 
@@ -24,8 +23,9 @@ class App extends Component {
   }
 
   onSearchChange = (event) => {
+    const searchField = event.target.value.toLowerCase();
     this.setState(() => {
-      return { searchField: event.target.value.toLowerCase() };
+      return { searchField };
     });
   };
 
